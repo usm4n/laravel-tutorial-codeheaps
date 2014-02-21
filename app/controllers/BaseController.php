@@ -2,11 +2,7 @@
 
 class BaseController extends \Controller {
 
-	/**
-	 * Setup the layout used by the controller.
-	 *
-	 * @return void
-	 */
+
 	/**
 	 * layout to use
 	 * @var View
@@ -14,8 +10,9 @@ class BaseController extends \Controller {
 	protected $layout = 'master';
 
 	/**
-	 * Used by Controller to setup layout
-	 * @return null
+	 * Setup the layout used by the controller.
+	 *
+	 * @return void
 	 */
 	protected function setupLayout()
 	{
