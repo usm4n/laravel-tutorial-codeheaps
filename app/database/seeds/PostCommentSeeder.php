@@ -26,7 +26,7 @@ class PostCommentSeeder extends Seeder {
 				$comment->commenter = 'xyz';
 				$comment->comment = substr($content, 0, 120);
 				$comment->email = 'xyz@xmail.com';
-				$comment->approved = 1;
+				$comment->approved = 'yes';
 				$post->comments()->save($comment);
 				$post->increment('comment_count');
 			}	
