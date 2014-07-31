@@ -6,7 +6,7 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         // Uncomment the below to wipe the table clean before populating
-        // DB::table('user')->truncate();
+        // DB::table('users')->truncate();
 
         $user = array(
             'username' => 'usm4n',
@@ -15,7 +15,7 @@ class UserTableSeeder extends Seeder
             'updated_at' => DB::raw('NOW()'),
         );
 
-        // Uncomment the below to run the seeder
+        // Comment the below to stop the seeder
         DB::table('users')->insert($user);
     }
 
