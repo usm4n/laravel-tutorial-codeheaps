@@ -25,7 +25,8 @@ Route::group(['prefix' => 'admin', 'before' => 'auth'], function () {
     Route::get('dash-board', function () {
         $layout = View::make('master');
         $layout->title = 'DashBoard';
-        $layout->main = View::make('dash')->with('content', 'Hi admin, Welcome to Dashboard!');
+        $username = Auth::user()->username;
+        $layout->main = View::make('dash')->with('content', "Hi $username, Welcome to Dashboard!");
         return $layout;
 
     });
